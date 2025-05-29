@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>F2K Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+     <style>
+      .logo-f2k {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Puedes cambiar "left" por "right" si lo quieres en la esquina derecha */
+  width: 80px;
+  height: auto;
+  z-index: 50;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+.logo-f2k:hover {
+  transform: scale(1.1);
+}
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.2s ease-out forwards;
+  }
+
+
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-white p-6 space-y-12">
+<img src="f2k.png" alt="F2K Logo" class="logo-f2k">
+
+    <!-- Encabezado -->
+    <header class="text-center space-y-2" data-aos="fade-down">
+  <h1 class="text-4xl font-bold text-cyan-400 animate-pulse drop-shadow-lg">
+    <span class="inline-block animate-bounce">F</span>
+    <span class="inline-block animate-fade-in">2</span>
+    <span class="inline-block animate-bounce">K</span> Studio
+  </h1>
+  <p class="text-lg text-slate-300">Conecta tu mundo con F2K</p>
+</header>
+
+
+    <!-- Secciones -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-slate-900 border border-cyan-700 rounded-2xl p-6" data-aos="fade-right">
+        <h2 class="text-2xl font-semibold text-cyan-300">¿Quiénes somos?</h2>
+        <p class="mt-2 text-slate-300">
+          F2K Studio es una empresa caleña dedicada a la creación de páginas web personalizadas para emprendedores, negocios y profesionales que desean tener presencia digital de forma profesional, rápida y efectiva.
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-cyan-700 rounded-2xl p-6" data-aos="fade-left">
+        <h2 class="text-2xl font-semibold text-cyan-300">Nuestros servicios</h2>
+        <ul class="list-disc list-inside mt-2 text-slate-300 space-y-1">
+          <li>Diseño y desarrollo de páginas web</li>
+          <li>Soporte técnico y mantenimiento</li>
+          <li>Optimización para celulares</li>
+          <li>Asesoría personalizada</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-900 border border-cyan-700 rounded-2xl col-span-1 md:col-span-2 p-6" data-aos="zoom-in">
+        <h2 class="text-2xl font-semibold text-cyan-300">Contáctanos</h2>
+        <p class="mt-2 text-slate-300">¿Quieres una página web profesional? Escríbenos:</p>
+
+        <!-- Formulario -->
+        <form action="https://formspree.io/f/xpwdeyok" method="POST" class="mt-4 space-y-4">
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+            class="w-full p-2 rounded-md bg-slate-800 border border-cyan-600 text-white"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Tu correo electrónico"
+            required
+            class="w-full p-2 rounded-md bg-slate-800 border border-cyan-600 text-white"
+          />
+          <textarea
+            name="mensaje"
+            placeholder="Escribe tu mensaje"
+            required
+            class="w-full p-2 rounded-md bg-slate-800 border border-cyan-600 text-white"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2 px-4 rounded-xl transition-all duration-300"
+          >
+            Enviar mensaje
+          </button>
+        </form>
+
+        <!-- Información de contacto -->
+        <div class="mt-6 text-slate-300 space-y-1">
+          <p><strong>Email:</strong> f2k.stud@gmai.com</p>
+          <p><strong>WhatsApp:</strong> +57 3242792051</p>
+          <p><strong>Instagram:</strong> @f2k_studio</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // duración de animaciones en ms
+        once: true, // solo se anima una vez al hacer scroll
+      });
+    </script>
+  </body>
+</html>
+
